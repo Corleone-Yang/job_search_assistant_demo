@@ -6,11 +6,13 @@ This is a view of this app:
 
 index page:
 
-![Screenshot 2024-06-30 at 13 29 35](https://github.com/Corleone-Yang/job_search_assistant_demo/assets/137965901/70eb6d2e-9b08-4f53-91d9-e8f61691df86)
+![Screenshot 2024-06-30 at 13 50 00](https://github.com/Corleone-Yang/job_search_assistant_demo/assets/137965901/4f5aca36-f326-41fa-9997-21e5e094a18a)
 
 result page:
 
-![Screenshot 2024-06-30 at 13 30 07](https://github.com/Corleone-Yang/job_search_assistant_demo/assets/137965901/f1613afb-59e5-4a3c-bff2-d55e579718ca)
+![Screenshot 2024-06-30 at 13 50 23](https://github.com/Corleone-Yang/job_search_assistant_demo/assets/137965901/c1ff1843-5c27-46bd-8d6b-b8dee5e37104)
+
+job match function are still under development.
 
 Note: You need to replace api_key with your openai private key here. The file path is ./utils/prompt.py
 ```python
