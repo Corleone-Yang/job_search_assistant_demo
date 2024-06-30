@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Assistant</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Search Assistant</h1>
+        <h2>Upload your PDF resume</h2>
+        <p class="description">Upload a PDF file. I can help you to adjust resume and match jobs !</p>
+        <form action="/api/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="pdf_file" accept="application/pdf">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

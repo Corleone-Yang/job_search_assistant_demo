@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Service</title>
+    <link rel="stylesheet" href="/static/css/result.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcome-message"></h1>
+        <div class="evaluation-and-advice">
+            <div class="evaluation">
+                <h2>Comprehensive Evaluation</h2>
+                <pre id="comments-message"></pre>
+            </div>
+            <div class="advice">
+                <h2>Adjustment Advice</h2>
+                <pre id="revise-message"></pre>
+            </div>
+        </div>
+        <div id="job-assistance" class="hidden">
+            <h2>Do you need assistance for your job matching?</h2>
+            <button onclick="window.location.href='/api/jobmatch'">Get Assistance</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $.post("/api/prompt", {action: "welcome"}, function(data) {
+                $("#welcome-message").text(data.response);
+                $(".evaluation-and-advice").show();
+
+                $.post("/api/prompt", {action: "comments"}, function(data) {
+                    $("#comments-message").text(data.response);
+                });
+
+                $.post("/api/prompt", {action: "revise"}, function(data) {
+                    $("#revise-message").text(data.response);
+                    $("#job-assistance").removeClass("hidden");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
