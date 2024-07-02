@@ -1,4 +1,4 @@
-# Rapid-JobSearch-ResumeSubmission-Demo
+# job-search-assistant-demo
 
 The virtual environment has been established, you can directly run this app by "flask run"
 
